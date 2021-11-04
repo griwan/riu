@@ -1,0 +1,61 @@
+@import './variable.scss';
+
+.news-card {
+  position: relative;
+  margin: 1rem;
+  padding: 1rem;
+  width: 30rem;
+  max-height: 30rem;
+  background-color: $offwhite;
+  box-shadow:  $card-shadow;
+  transition: box-shadow 0.3s ease-in-out;
+  
+  &__image-container{
+    position: relative;
+    margin-bottom: 0.5rem; 
+
+    img {
+      position: relative;
+      width: 100%;
+      height: 22rem;  
+    }
+
+  }
+  
+  .news-card__title {
+    font-weight: bold;
+    font-size: 1.8rem;
+    padding:0.5rem 1rem;
+    text-align: center;
+    border-top: 0.2rem solid rgba($dark,0.2);
+  }
+
+  .news-card__description {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rgba($dark,0.6);
+    display: flex;
+    align-items: center;
+    color:$white;
+    padding:1rem;
+    z-index: 9;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  
+  &:hover{
+    box-shadow: $card-shadow-hover;
+
+    .news-card__image-container img{
+      filter: blur(0.2rem);
+    }
+    .news-card__description{
+      opacity: 1;
+    }
+
+  }
+}

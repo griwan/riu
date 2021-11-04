@@ -1,0 +1,72 @@
+@import './variable.scss';
+
+html {
+  font-size: 62.5%;
+}
+body{
+  background: linear-gradient(255.98deg, #B4A0FD 0%, #e6e6e6 91.57%);
+  font-family: $main-font;
+  font-size: 1.4rem;
+  color:$dark;
+}
+a{
+  text-decoration: none;
+  color:$dark
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.body{
+  min-height: 60vh;
+}
+
+.title-font{ 
+  font-family: $title-font;
+}
+
+.center{
+  text-align: center;
+}
+
+.padding-top{
+  padding-top: 1.5rem;
+}
+.container,
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  padding:0.5rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.not-fluid{
+  max-width: 100rem;
+  margin:auto;
+}
+.row{
+  width:100%;
+}
+.push-to-top{
+  margin-top: -8rem;
+}
+
+//colors
+.offwhite-bg{
+  background-color: $offwhite;
+}
+
+
+//for responsive design
+@media (max-width:$mobile) {
+  .container{
+    flex-direction: column;
+  }
+    
+}

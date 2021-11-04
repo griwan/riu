@@ -1,0 +1,131 @@
+@import "../styles/variable";
+
+.events-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+.datestamp {
+  padding:0 1rem;
+
+  .date {
+    font-size: 4rem;
+    line-height: 5.6rem;
+    font-weight: bolder;
+  }
+
+  .month,
+  .day {
+    font-size: 2.5rem;
+    line-height: 4.2rem;
+  }
+}
+
+.events-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 40%;
+  padding:0 1.5rem;
+
+  .title {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+
+  .description {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+
+  .event-text__location {
+    margin: 1rem 0;
+  }
+
+  .icons {
+    color: $tertiary;
+    vertical-align: bottom;
+    margin: 0 0.5rem;
+  }
+
+  a {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    background: $tertiary;
+    color: $white;
+    padding: 1rem 1rem;
+    margin-top: 3rem;
+    width: 10rem;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 2px;
+
+    &::before {
+      display: block;
+      content: "";
+      width: 0;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba($white, 0.3);
+      clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0 99%, 0 0);
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
+}
+
+.events-image > img {
+  width: 20em;
+  height: 25rem;
+  object-fit: cover;
+}
+
+@media (max-width:$mobile) {
+  .events-card{
+    flex-direction: column;
+
+    &>div{
+      width: 100%;
+      margin: 0;
+      text-align: center;
+    }
+
+    .events-image{
+      order:1
+    }
+
+    .datestamp{
+      order:2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & div{
+        margin:0 0.5rem ;
+        font-size: 1.6rem;
+      }
+    }
+
+    .events-text{
+      order:3;
+      padding:0 1.5rem ;
+
+      a{
+        display: block;
+        margin: 2rem auto auto auto;
+      }
+    }
+  }
+}

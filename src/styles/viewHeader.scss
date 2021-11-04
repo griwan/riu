@@ -1,0 +1,79 @@
+@import './variable.scss';
+
+//variables
+$view-header-height:25rem;
+
+
+.view-header {
+    position: relative;
+    width:100%;
+    height:$view-header-height;
+    clip-path: polygon(50% 0%, 100% 0, 100% 65%, 0 100%, 0 0);
+    z-index: 4;
+
+    img.view-header__image{
+        width:100%;
+        height:$view-header-height;
+        object-fit: cover;
+        position: absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+    }
+
+    &::before{
+        content:'';
+        position: absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        background-color: rgba($primary,0.4);
+        filter: blur(2rem);
+        z-index: 5;
+
+    }
+    
+    h1.view-header__heading{ 
+        display: flex;
+        height:$view-header-height;
+        justify-content: center;
+        align-items: center ;
+        position: relative;
+        padding: 0 1rem;
+        font-size: 4rem;
+        text-align: center;
+        z-index: 6;
+        color:rgba($offwhite,0.9);
+        // position: absolute;
+        // left:50%;
+        // top:40%;
+        // transform:translate(-50%,-50%);
+        text-shadow: 0.1rem 0.1rem 1rem $dark;
+        font-family: $title-font;
+    }
+    
+
+
+}
+
+.view-header-clipless{
+    clip-path: unset;
+}
+@media (max-width:$mobile) {
+    .view-header {
+        height:25rem;
+        clip-path: polygon(50% 0%, 100% 0, 100% 80%, 0 100%, 0 0);
+
+
+        img.view-header__image{
+            height:25rem;
+        }
+
+    }
+
+    .view-header-clipless{
+        clip-path: none;
+    }
+}

@@ -1,0 +1,91 @@
+@import "./variable.scss";
+
+.footer {
+  background-color: $dark;
+  padding: 2rem 1rem;
+  color: rgba($offwhite, 0.5);
+  display: flex;
+  flex-direction: column;
+
+  a {
+    color: rgba($offwhite, 0.5);
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  
+
+  & > div {
+    margin: 1rem;
+    padding: 0 1rem;
+
+    & > h4 {
+      border-bottom: 0.1rem solid rgba(110, 110, 110, 0.603);
+      padding-bottom: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    ul{
+      padding-left: 1.5rem;
+    }
+    li {
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  @media (max-width:$mobile) {
+    div:nth-child(1){
+      order:4
+    }   
+  }
+ 
+
+}
+
+.footer-head {
+  
+  .footer_logo {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: rgba(#E0E1DD,0.6);
+  }
+
+  & > p:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  & > p:last-child {
+    margin-bottom: 3.5rem;
+  }
+}
+
+.footer-bottom {
+  border-top: 0.1rem solid grey;
+  padding: 2rem 1rem 0 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-icons a {
+  
+  & {
+    margin-right: 1.5rem;
+    transition: all 0.3s ease;
+    
+  }
+
+  & > *:hover {
+    transform: scale(1.2);
+  }
+}

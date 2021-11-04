@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+.footer {
+  background-color: #242424;
+  padding: 2rem 1rem;
+  color: rgba(238, 238, 238, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer a {
+  color: rgba(238, 238, 238, 0.5);
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.footer-top > div {
+  margin: 1rem;
+  padding: 0 1rem;
+}
+
+.footer-top > div > h4 {
+  border-bottom: 0.1rem solid rgba(110, 110, 110, 0.603);
+  padding-bottom: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.footer-top > div ul {
+  padding-left: 1.5rem;
+}
+
+.footer-top > div li:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 680px) {
+  .footer-top div:nth-child(1) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+}
+
+.footer-head .footer_logo {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: rgba(224, 225, 221, 0.6);
+}
+
+.footer-head > p:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.footer-head > p:last-child {
+  margin-bottom: 3.5rem;
+}
+
+.footer-bottom {
+  border-top: 0.1rem solid grey;
+  padding: 2rem 1rem 0 1rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-icons a {
+  margin-right: 1.5rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.footer-icons a > *:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+/*# sourceMappingURL=footer.css.map */
