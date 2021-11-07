@@ -24,7 +24,7 @@ export const BlogCard = ({blogObject}) => {
         }
         
         fetchData()
-    }, [])
+    }, [blogObject.author])
 
 
     return (

@@ -8,6 +8,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 100%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -15,7 +16,11 @@
       -ms-flex-align: center;
           align-items: center;
   margin-top: 3rem;
-  padding: 0 1rem;
+  padding: 0 1rem 2rem 1rem;
+}
+
+.events-card:not(:last-child) {
+  border-bottom: 0.2rem solid rgba(238, 238, 238, 0.2);
 }
 
 .datestamp {
@@ -104,11 +109,17 @@
   width: 100%;
 }
 
+.events-image {
+  width: 30rem;
+  height: 25rem;
+}
+
 .events-image > img {
-  width: 20em;
+  width: 100%;
   height: 25rem;
   -o-object-fit: cover;
      object-fit: cover;
+  vertical-align: bottom;
 }
 
 @media (max-width: 680px) {

@@ -15,8 +15,8 @@ const Events = () => {
   }, [])
   
   //pagination variables
-  var total_pages = null;
-  var per_page = 6;
+  // var total_pages = null;
+  // var per_page = 6;
 
 //state declarations
   const [events,setEvents] = useState(null);
@@ -25,7 +25,7 @@ const Events = () => {
   useEffect(() => {
     const fetchAllEvents = async () => {
       try {
-        const response = await api.get("events?per_page=2&page=2");
+        const response = await api.get("events");
         console.log(response.headers)
         
         setEvents(response.data);

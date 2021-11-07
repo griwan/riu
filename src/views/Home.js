@@ -28,6 +28,7 @@ const Home = () => {
   const [slideIndex, setSlideIndex] = useState(1);
   const [projects, setProjects] = useState(null);
   const [news, setNews] = useState(null);
+  const [events, setEvents] = useState(null)
 
   const moveDot = (index) => {
     setSlideIndex(index);
@@ -44,7 +45,7 @@ const Home = () => {
     fetchProjects();
   }, []);
 
-  //fetch projects
+  //fetch news
   useEffect(() => {
     const fetchNews = async () => {
       try {
@@ -54,6 +55,17 @@ const Home = () => {
     };
     fetchNews();
   }, []);
+
+  //fetch events
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const response = await api.get(`events?per_page=3`)
+        setEvents(response.data)
+      } catch (err) {}
+    }
+    fetchEvents()
+  },[])
 
   return (
     <div className="home push-to-top">
@@ -148,7 +160,7 @@ const Home = () => {
 
       {/* Our Work Section */}
       <div className="our-work">
-        <h1 class="title-font">Our Latest Projects</h1>
+        <h1 class="title-font">Latest Projects</h1>
 
         <div className="view-button">
           <Button />
@@ -179,7 +191,7 @@ const Home = () => {
           <Button />
         </div>
 
-        <div className="flex-container dark-bg">
+        <div className="flex-container">
           {news == null ? (
             <EllipsisSpinner isNotWhite={true}/>
           ) : (
@@ -197,9 +209,6 @@ const Home = () => {
               );
             })
           )}
-          {/* <News title="Lorem ipsum dolor sit." image="./images/news.jpg" />
-          <News title="Lorem ipsum dolor sit." image="./images/news.jpg" />
-          <News title="Lorem ipsum dolor sit." image="./images/news.jpg" /> */}
         </div>
       </div>
 
@@ -211,36 +220,22 @@ const Home = () => {
           <Button />
         </div>
 
-        <Events
-          date="11"
-          month="OCT 2021"
-          day="Monday"
-          title=" Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-          description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum placeat expedita eligendi. Libero, at molestiae!"
-          image="./images/events.jpg"
-        />
-
-        <hr />
-
-        <Events
-          date="11"
-          month="OCT,2021"
-          day="Monday"
-          title=" Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-          description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum placeat expedita eligendi. Libero, at molestiae!"
-          image="./images/events.jpg"
-        />
-
-        <hr />
-
-        <Events
-          date="11"
-          month="OCT,2021"
-          day="Monday"
-          title=" Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-          description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum placeat expedita eligendi. Libero, at molestiae!"
-          image="./images/events.jpg"
-        />
+        {events == null ? (
+            <EllipsisSpinner isNotWhite={true}/>
+          ) : (
+            events.map((events, id) => {
+              return (
+                  <Events
+                    key={id}
+                    id={events.id}
+                    date={events.date}
+                    title={events.title.rendered}
+                    description={events.excerpt.rendered}
+                    image={events.acf.feature_image.url}
+                  />
+              );
+            })
+          )}
       </div>
 
       {/* Newsletter Section */}

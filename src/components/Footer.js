@@ -16,7 +16,7 @@ const Footer = () => {
           <Link to="#">
             <img
               className="footer_logo"
-              src={"./images/logo-small.png"}
+              src="images/static/logo-small.png"
               alt="logo"
             />
           </Link>
@@ -65,19 +65,16 @@ const Footer = () => {
           <h4>Quick Links</h4>
           <ul>
             <li>
-              <Link to="#">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="#">Projects</Link>
+              <Link to="/projects">Projects</Link>
             </li>
             <li>
-              <Link to="#">News</Link>
+              <Link to="/news">News</Link>
             </li>
             <li>
-              <Link to="#">Vaccancy</Link>
-            </li>
-            <li>
-              <Link to="#">About Us</Link>
+              <Link to="/about-us">About Us</Link>
             </li>
           </ul>
         </div>
@@ -85,7 +82,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <div className="copyright">
-          <p>riu.acem.edu.np | &copy; 2021, Developed by Aashish Rai and Kalyan Devkota</p>
+          <p>riu.acem.edu.np | &copy; 2021, Developed at RIU by Aashish Rai and Kalyan Devkota</p>
         </div>
 
         <div className="footer-icons">

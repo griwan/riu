@@ -68,4 +68,18 @@
 .news-card:hover .news-card__description {
   opacity: 1;
 }
+
+@media (max-width: 680px) {
+  .news-card {
+    -webkit-box-shadow: 0 1rem 1rem 0.4rem rgba(9, 40, 102, 0.5);
+            box-shadow: 0 1rem 1rem 0.4rem rgba(9, 40, 102, 0.5);
+  }
+  .news-card .news-card__image-container img {
+    -webkit-filter: blur(0.2rem);
+            filter: blur(0.2rem);
+  }
+  .news-card .news-card__description {
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=newsCard.css.map */

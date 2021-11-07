@@ -59,3 +59,20 @@
 
   }
 }
+
+@media (max-width: $mobile) {
+  .news-card{
+
+    
+      box-shadow: $card-shadow-hover;
+  
+      .news-card__image-container img{
+        filter: blur(0.2rem);
+      }
+      .news-card__description{
+        opacity: 1;
+      }
+  
+
+  }
+}
