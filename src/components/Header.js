@@ -25,7 +25,7 @@ const Header = () => {
     <div className={header ? "header active" : "header"}>
       <ProgressBar />
       <div className="header-inner">
-      <Link to="#">
+      <Link to="/">
         <img className="header_logo" src="images/static/logo-small.png" alt="RIU logo" />
       </Link>
 
