@@ -92,11 +92,8 @@ const Home = () => {
           <h1>RIU</h1>
           <h3>Research and Innovation Unit</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
-            enim veritatis perferendis atque itaque id. Repellendus, saepe quae!
-            Dolore ipsa consequuntur modi expedita distinctio, iste alias labore
-            voluptatum facilis! Corporis quo aliquam doloribus suscipit quasi ad
-            atque molestias iusto. Nam?
+          Research and Innovation Unit(RIU) is an inhouse research unit of acem. It mainly focuses on minimizing the gap between industry and academia. Thus, it solves industry problems utilizing acem’s faculties, students and global experts.
+
           </p>
           <Link to="/about-us">Read More</Link>
         </div>
@@ -125,35 +122,36 @@ const Home = () => {
 
         <div className="flex-container not-fluid">
           <Card
-            image="./images/research.jpg"
-            title="Lorem, ipsum."
-            description="Lorem ipsum dolor sit amet consectetur adipisicing elit.ipsum dolor sit amet consectetur adipisicing elit.. Repellendus quas asperiores laudantium minima, similique sunt!"
+            image="./images/industry.jpg"
+            title="Industry research and consulting"
+            description="Research and innovation unit works together with industry and academia for common goals that have been widely implemented in global modality as an effort to bridge the gap."
           />
           <Card
-            image="./images/research.jpg"
-            title="Lorem, ipsum."
-            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas asperiores laudantium minima, similique sunt!"
+            image="./images/training.jpg"
+            title="Trainings"
+            description="To bridge the gap between industry and academia, RIU empowers students with multiple capacity building training programs."
           />
           <Card
-            image="./images/research.jpg"
-            title="Lorem, ipsum."
-            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas asperiores laudantium minima, similique sunt!"
+            image="./images/learning.jpg"
+            title="Project Based learning"
+            description="Project based Learning with real time problem solving  enables students with the better learning capability. RIU provides the environment for Project based Learning."
           />
 
           <Card
-            image="./images/research.jpg"
-            title="Lorem, ipsum."
-            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas asperiores laudantium minima, similique sunt!"
+            image="./images/supervision.jpg"
+            title="Project Supervision"
+            description="Having a global network of experts in multiple fields, RIU provides the best supervision for the project.
+            "
           />
           <Card
-            image="./images/research.jpg"
-            title="Lorem, ipsum."
-            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas asperiores laudantium minima, similique sunt!"
+            image="./images/prototyping.jpg"
+            title="Prototyping"
+            description="For innovation, there is a need for prototyping. RIU provides the environment and the resources for prototyping."
           />
           <Card
-            image="./images/research.jpg"
-            title="Lorem, ipsum."
-            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas asperiores laudantium minima, similique sunt!"
+            image="./images/innovation.jpg"
+            title="Innovation"
+            description="For innovation, there is a need for prototyping. RIU provides the environment and the resources for prototyping."
           />
         </div>
       </div>

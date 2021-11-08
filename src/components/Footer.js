@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import api from "../axios";
 
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CallIcon from "@mui/icons-material/Call";
@@ -7,8 +8,36 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GoogleIcon from "@mui/icons-material/Google";
 import "../styles/footer.css";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Footer = () => {
+  const [projects, setProjects] = useState(null)
+  const [news,setNews] = useState(null)
+
+ 
+  //fetch projects
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const response = await api.get(`projects?per_page=3`);
+        setProjects(response.data);
+      } catch (err) {}
+    };
+    fetchProjects();
+  }, []);
+
+  //fetch news
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const response = await api.get(`news?per_page=3`);
+        setNews(response.data);
+      } catch (err) {}
+    };
+    fetchNews();
+  }, []);
+
   return (
     <div className="footer">
       <div className="footer-top">
@@ -37,27 +66,34 @@ const Footer = () => {
         <div>
           <h4>Projects</h4>
           <ul>
-            <li>
-              <Link to="#">Lorem Ipsum</Link>
-            </li>
-            <li>
-              <Link to="#">Lorem Ipsum</Link>
-            </li>
+          {projects === null ? (
+          "Loading ..."
+        ) : (
+          projects.map((project, id) => {
+            return (
+             <li key={id}>
+              <Link to={`projects/${project.id}`}>{project.title.rendered}</Link>
+               </li>
+            );
+          })
+        )}
           </ul>
         </div>
 
         <div>
           <h4>News</h4>
           <ul>
-            <li>
-              <Link to="#">Lorem Ipsum</Link>
-            </li>
-            <li>
-              <Link to="#">Lorem Ipsum</Link>
-            </li>
-            <li>
-              <Link to="#">Lorem Ipsum</Link>
-            </li>
+          {news === null ? (
+          "Loading ..."
+        ) : (
+          news.map((news, id) => {
+            return (
+             <li key={id}>
+              <Link to={`news/${news.id}`}>{news.title.rendered}</Link>
+               </li>
+            );
+          })
+        )}
           </ul>
         </div>
 
