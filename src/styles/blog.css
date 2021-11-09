@@ -226,6 +226,19 @@
   display: block;
 }
 
+.wp-content figure {
+  margin: 1rem;
+}
+
+.wp-content figure.aligncenter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .wp-content img[class*="size-full wp-image"] {
   width: 95%;
   height: 95%;

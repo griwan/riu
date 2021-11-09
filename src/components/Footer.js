@@ -42,10 +42,10 @@ const Footer = () => {
     <div className="footer">
       <div className="footer-top">
         <div className="footer-head">
-          <Link to="#">
+          <Link to="/">
             <img
               className="footer_logo"
-              src="images/static/logo-small.png"
+              src="http://riuacem.com/images/static/white-logo.png"
               alt="logo"
             />
           </Link>

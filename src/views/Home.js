@@ -17,12 +17,39 @@ import News from "../components/NewsCard";
 import Events from "../components/EventsCard";
 import { EllipsisSpinner } from "../components/LoadingSpinners";
 
+//for animations
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import "../styles/animations.css";
+
+// gsap.registerPlugin(ScrollTrigger);
+
+
 const Home = () => {
 
   //after render scroll to top
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  // //for animations
+  // const gsapProjects = document.querySelectorAll('.gsap-projects')
+
+  // useEffect(()=>{
+  //   gsapProjects.forEach((el)=>{
+  //     gsapProjects.from(el,{
+  //       duration:1,
+  //       autoAlpha:1,
+  //       ease:'none',
+  //       ScrollTrigger:{
+  //         trigger:el,
+  //         start:'top center+=100',
+  //         toggleActions:'play none none none',
+  //         markers:true
+  //       }
+  //     })
+  //   })
+  // },[])
   
   // variable declaration
   const [slideIndex, setSlideIndex] = useState(1);
@@ -161,7 +188,7 @@ const Home = () => {
         <h1 class="title-font">Latest Projects</h1>
 
         <div className="view-button">
-          <Button />
+          <Button routeTo='/projects' />
         </div>
 
         {projects === null ? (
@@ -186,7 +213,7 @@ const Home = () => {
         <h1>News</h1>
 
         <div className="view-button">
-          <Button />
+          <Button routeTo='/news'/>
         </div>
 
         <div className="flex-container">
@@ -215,7 +242,7 @@ const Home = () => {
         <h1>Events</h1>
 
         <div className="view-button">
-          <Button />
+          <Button routeTo='/events'/>
         </div>
 
         {events == null ? (

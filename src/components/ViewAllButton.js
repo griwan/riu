@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import "../styles/viewAllButton.css";
 
-const Button = () => {
+const Button = ({routeTo}) => {
   return (
     <div className="button">
-      <Link to="#">View All</Link>
+      <Link to={`${routeTo}`}>View All</Link>
     </div>
   );
 };

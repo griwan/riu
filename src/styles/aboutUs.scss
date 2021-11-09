@@ -8,6 +8,7 @@
   position: relative;
   max-width: 70rem;
   z-index: 20;
+  padding-bottom:2rem;
   margin: -10rem 2% 2rem 15%;
   background: rgba(#e0e1dd, 0.8);
   box-shadow: 0.1rem 0.1rem 0.5rem 0 rgba($dark, 0.4);
@@ -119,6 +120,7 @@
   background: #f5f5f5;
   padding: 2rem 0;
   text-align: center;
+  margin-top: 4rem;
 
   h1{
       font-family: $title-font;
@@ -244,7 +246,7 @@
 }
 
 .about-us-timeline{
-  margin: 4rem 0;
+  margin: 4rem 0 8rem 0;
 
   h1{
     text-align: center;

@@ -190,7 +190,14 @@ $blog-bg:#7e6dbd;
     .aligncenter{
           display:block;
         }
-  
+    
+    figure{
+            margin:1rem
+        }
+    figure.aligncenter{
+        display: flex;
+        justify-content: center;
+        }
 
     //media formatters
     img[class*="size-full wp-image"]{ 

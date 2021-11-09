@@ -216,7 +216,7 @@ To achieve this goal, RIU trains students on both technical and non-technical sk
       {/* Description section */}
       <div className="descriptive-box">
         
-        <div className="descriptive-card">
+        {/* <div className="descriptive-card">
           <img
             className="descriptive-image"
             src="./images/3dprinting.jpg"
@@ -250,7 +250,7 @@ The team carried out an assessment on Reinforced Suspension Preheater (RSP) to i
 
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="team">
@@ -258,7 +258,7 @@ The team carried out an assessment on Reinforced Suspension Preheater (RSP) to i
         <div className="team-box flex-container">
           <div className="team-card">
             <div className="team-image">
-              <img src="./images/sojan.png" alt="sojan" />
+              <img src="./images/about-us/team/sojan.png" alt="sojan" />
             </div>
 
             <hr />
@@ -278,7 +278,7 @@ The team carried out an assessment on Reinforced Suspension Preheater (RSP) to i
 
           <div className="team-card">
             <div className="team-image">
-              <img src="./images/suraj.png" alt="suraj" />
+              <img src="./images/about-us/team/suraj.png" alt="suraj" />
             </div>
 
             <hr />
@@ -298,7 +298,7 @@ The team carried out an assessment on Reinforced Suspension Preheater (RSP) to i
 
           <div className="team-card">
             <div className="team-image">
-              <img src="./images/alish.png" alt="alish" />
+              <img src="./images/about-us/team/alish.png" alt="alish" />
             </div>
 
             <hr />
