@@ -225,7 +225,7 @@
 }
 
 .team .team-card hr {
-  border: 1px solid rgba(36, 36, 36, 0.5);
+  border: 1px solid rgba(36, 36, 36, 0.3);
   width: 95%;
   position: absolute;
   bottom: 6.5rem;

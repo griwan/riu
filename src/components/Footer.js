@@ -11,6 +11,7 @@ import "../styles/footer.css";
 import { useState } from "react";
 import { useEffect } from "react";
 
+import whiteLogo from '../resources/images/riu-logo-white.png'
 const Footer = () => {
   const [projects, setProjects] = useState(null)
   const [news,setNews] = useState(null)
@@ -45,7 +46,7 @@ const Footer = () => {
           <Link to="/">
             <img
               className="footer_logo"
-              src="http://riuacem.com/images/static/white-logo.png"
+              src={whiteLogo}
               alt="logo"
             />
           </Link>
@@ -55,11 +56,11 @@ const Footer = () => {
           </p>
 
           <p>
-            <CallIcon /> <span>+987456123 / 01-123456</span>
+            <CallIcon /> <a href="tel:+977987456123">+977987456123</a> / <a href="tel:+9771123456">01-123456</a>
           </p>
 
           <p>
-            <EmailIcon /> <span>riu@acem.edu.np</span>
+            <EmailIcon /> <a href="mailto:riu@acem.edu.np">riu@acem.edu.np</a>
           </p>
         </div>
 

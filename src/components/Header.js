@@ -4,6 +4,7 @@ import "../styles/header.css";
 import ProgressBar from "./ProgressBar";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import Logo from '../resources/images/riu-logo.png'
 
 const Header = () => {
   const [header, setHeader] = useState(false);
@@ -26,7 +27,7 @@ const Header = () => {
       <ProgressBar />
       <div className="header-inner">
       <Link to="/">
-        <img className="header_logo" src="images/static/logo-small.png" alt="RIU logo" />
+        <img className="header_logo" src={Logo} alt="RIU logo" />
       </Link>
 
       <div className="menu-btn"></div>

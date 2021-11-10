@@ -7,7 +7,6 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import { useEffect } from "react";
 
 import BlogContent from "./views/BlogContent";
 import AboutUs from "./views/AboutUs";
