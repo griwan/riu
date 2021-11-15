@@ -5,6 +5,7 @@ import ProgressBar from "./ProgressBar";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import Logo from '../resources/images/riu-logo.png'
+import {Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 const Header = () => {
   const [header, setHeader] = useState(false);
@@ -34,23 +35,23 @@ const Header = () => {
 
       <div className={showMenu ? "header__nav active" : "header__nav"}>
         <div className="header__options">
-          <NavLink exact={true} to="/" activeClassName="nav-active"   onClick={() => setShowMenu(false)}>
-                Home
+          <NavLink exact={true} to="/" activeClassName="nav-active"   onClick={() => setShowMenu(true)} >
+                Explore
           </NavLink>
           <NavLink  to="/projects" activeClassName="nav-active" onClick={() => setShowMenu(false)}>
-                Projects
+                Work
           </NavLink>
           <NavLink to="/news" activeClassName="nav-active" onClick={() => setShowMenu(false)}>
-                News
+                Events
           </NavLink>
           <NavLink to="/events" activeClassName="nav-active" onClick={() => setShowMenu(false)}>
-               Events
+               Blog
           </NavLink>
           <NavLink  to="/blog" activeClassName="nav-active" onClick={() => setShowMenu(false)}>
-                Blog
+                Training
           </NavLink>
           <NavLink exact={true} to="/about-us" activeClassName="nav-active" onClick={() => setShowMenu(false)}>
-                About Us
+                Join us
           </NavLink>
 
          

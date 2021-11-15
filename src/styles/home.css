@@ -252,8 +252,8 @@
 .our-work {
   position: relative;
   padding-top: 3rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#604172), to(#555db7));
-  background: linear-gradient(#604172, #555db7);
+  background: -webkit-gradient(linear, left top, left bottom, from(#cbe9ff), to(#14466b));
+  background: linear-gradient(#1d4999, #cbe9ff);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -302,7 +302,7 @@
 
 .events {
   position: relative;
-  background: #415a77;
+  background: #1d4999;
   color: white;
   padding: 3rem 0;
   display: -webkit-box;
@@ -331,8 +331,8 @@
 }
 
 .newsletter {
-  background: #e0e1dd;
-  color: #242424;
+  background: #ffff;
+  color: #1d4999;
   padding: 4rem 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
